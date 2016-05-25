@@ -11,7 +11,9 @@
 		25226EDA1CF5E604007DEDE3 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25226ED91CF5E604007DEDE3 /* ExploreCollectionViewCell.swift */; };
 		25226EDC1CF5EEB1007DEDE3 /* FeedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25226EDB1CF5EEB1007DEDE3 /* FeedTVC.swift */; };
 		25226EDF1CF5F54A007DEDE3 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25226EDD1CF5F54A007DEDE3 /* HeaderTableViewCell.swift */; };
-		25226EE01CF5F54A007DEDE3 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25226EDE1CF5F54A007DEDE3 /* HeaderTableViewCell.xib */; };
+		25AC01431CF5F7C500BCE693 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AC01421CF5F7C500BCE693 /* HeaderTableViewCell.xib */; };
+		25AC01451CF5FFA300BCE693 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC01441CF5FFA300BCE693 /* PhotoTableViewCell.swift */; };
+		25AC01471CF5FFDF00BCE693 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC01461CF5FFDF00BCE693 /* CommentTableViewCell.swift */; };
 		25B0E0441CF36E25004151E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B0E0431CF36E25004151E1 /* AppDelegate.swift */; };
 		25B0E0491CF36E25004151E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B0E0471CF36E25004151E1 /* Main.storyboard */; };
 		25B0E04B1CF36E25004151E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B0E04A1CF36E25004151E1 /* Assets.xcassets */; };
@@ -23,7 +25,9 @@
 		25226ED91CF5E604007DEDE3 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
 		25226EDB1CF5EEB1007DEDE3 /* FeedTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTVC.swift; sourceTree = "<group>"; };
 		25226EDD1CF5F54A007DEDE3 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
-		25226EDE1CF5F54A007DEDE3 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		25AC01421CF5F7C500BCE693 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		25AC01441CF5FFA300BCE693 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		25AC01461CF5FFDF00BCE693 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		25B0E0401CF36E25004151E1 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B0E0431CF36E25004151E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B0E0481CF36E25004151E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +47,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25AC01481CF6070E00BCE693 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25B0E0471CF36E25004151E1 /* Main.storyboard */,
+				25226ED91CF5E604007DEDE3 /* ExploreCollectionViewCell.swift */,
+				25226EDD1CF5F54A007DEDE3 /* HeaderTableViewCell.swift */,
+				25AC01441CF5FFA300BCE693 /* PhotoTableViewCell.swift */,
+				25AC01461CF5FFDF00BCE693 /* CommentTableViewCell.swift */,
+				25AC01421CF5F7C500BCE693 /* HeaderTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		25AC01491CF6073800BCE693 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25226ED71CF5E59E007DEDE3 /* ExploreCVC.swift */,
+				25226EDB1CF5EEB1007DEDE3 /* FeedTVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		25B0E0371CF36E25004151E1 = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				25B0E0431CF36E25004151E1 /* AppDelegate.swift */,
-				25B0E0471CF36E25004151E1 /* Main.storyboard */,
 				25B0E04A1CF36E25004151E1 /* Assets.xcassets */,
 				25B0E04C1CF36E25004151E1 /* LaunchScreen.storyboard */,
 				25B0E04F1CF36E25004151E1 /* Info.plist */,
-				25226ED71CF5E59E007DEDE3 /* ExploreCVC.swift */,
-				25226ED91CF5E604007DEDE3 /* ExploreCollectionViewCell.swift */,
-				25226EDB1CF5EEB1007DEDE3 /* FeedTVC.swift */,
-				25226EDD1CF5F54A007DEDE3 /* HeaderTableViewCell.swift */,
-				25226EDE1CF5F54A007DEDE3 /* HeaderTableViewCell.xib */,
+				25AC01491CF6073800BCE693 /* Controller */,
+				25AC01481CF6070E00BCE693 /* View */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -135,7 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25226EE01CF5F54A007DEDE3 /* HeaderTableViewCell.xib in Resources */,
+				25AC01431CF5F7C500BCE693 /* HeaderTableViewCell.xib in Resources */,
 				25B0E04E1CF36E25004151E1 /* LaunchScreen.storyboard in Resources */,
 				25B0E04B1CF36E25004151E1 /* Assets.xcassets in Resources */,
 				25B0E0491CF36E25004151E1 /* Main.storyboard in Resources */,
@@ -151,7 +173,9 @@
 			files = (
 				25226EDA1CF5E604007DEDE3 /* ExploreCollectionViewCell.swift in Sources */,
 				25226EDF1CF5F54A007DEDE3 /* HeaderTableViewCell.swift in Sources */,
+				25AC01451CF5FFA300BCE693 /* PhotoTableViewCell.swift in Sources */,
 				25226EDC1CF5EEB1007DEDE3 /* FeedTVC.swift in Sources */,
+				25AC01471CF5FFDF00BCE693 /* CommentTableViewCell.swift in Sources */,
 				25B0E0441CF36E25004151E1 /* AppDelegate.swift in Sources */,
 				25226ED81CF5E59E007DEDE3 /* ExploreCVC.swift in Sources */,
 			);
