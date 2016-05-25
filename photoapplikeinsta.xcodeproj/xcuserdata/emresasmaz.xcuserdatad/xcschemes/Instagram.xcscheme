@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
-               BuildableName = "Instagram.app"
+               BuildableName = "photoapplikeinsta.app"
                BlueprintName = "Instagram"
                ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
-            BuildableName = "Instagram.app"
+            BuildableName = "photoapplikeinsta.app"
             BlueprintName = "Instagram"
             ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
-            BuildableName = "Instagram.app"
+            BuildableName = "photoapplikeinsta.app"
             BlueprintName = "Instagram"
             ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
-            BuildableName = "Instagram.app"
+            BuildableName = "photoapplikeinsta.app"
             BlueprintName = "Instagram"
             ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
          </BuildableReference>

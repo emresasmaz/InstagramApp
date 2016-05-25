@@ -29,7 +29,7 @@
         <!--ExploreCVC-->
         <scene sceneID="Iu3-89-Ef2">
             <objects>
-                <collectionViewController id="8ok-QQ-puR" customClass="ExploreCVC" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="8ok-QQ-puR" customClass="ExploreCVC" customModule="photoapplikeinsta" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="W4u-xc-iqS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                             <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExplorePhotoCell" id="iPp-pj-Q3v" customClass="ExploreCollectionViewCell" customModule="Instagram" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExplorePhotoCell" id="iPp-pj-Q3v" customClass="ExploreCollectionViewCell" customModule="photoapplikeinsta" customModuleProvider="target">
                                 <rect key="frame" x="8" y="64" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -93,7 +93,7 @@
         <!--FeedTVC-->
         <scene sceneID="ARK-jp-j04">
             <objects>
-                <tableViewController id="83w-fb-IUl" customClass="FeedTVC" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="83w-fb-IUl" customClass="FeedTVC" customModule="photoapplikeinsta" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aNl-pF-8g4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +141,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="50" id="hC9-Ma-99L" customClass="HeaderTableViewCell" customModule="Instagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="50" id="hC9-Ma-99L" customClass="HeaderTableViewCell" customModule="photoapplikeinsta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="172" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hC9-Ma-99L" id="yqQ-kz-qZh">
@@ -188,7 +188,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="450" id="8Ns-xX-GHj" customClass="PhotoTableViewCell" customModule="Instagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="450" id="8Ns-xX-GHj" customClass="PhotoTableViewCell" customModule="photoapplikeinsta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="222" width="600" height="450"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ns-xX-GHj" id="ipT-6d-LJS">
@@ -232,7 +232,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="x5S-Ab-aIW" customClass="CommentTableViewCell" customModule="Instagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="x5S-Ab-aIW" customClass="CommentTableViewCell" customModule="photoapplikeinsta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="672" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x5S-Ab-aIW" id="yHS-s7-frL">
