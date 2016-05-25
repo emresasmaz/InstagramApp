@@ -28,7 +28,7 @@
 		25AC01421CF5F7C500BCE693 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		25AC01441CF5FFA300BCE693 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		25AC01461CF5FFDF00BCE693 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
-		25B0E0401CF36E25004151E1 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B0E0401CF36E25004151E1 /* InstagramLikeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLikeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B0E0431CF36E25004151E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B0E0481CF36E25004151E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25B0E04A1CF36E25004151E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		25B0E0411CF36E25004151E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25B0E0401CF36E25004151E1 /* Instagram.app */,
+				25B0E0401CF36E25004151E1 /* InstagramLikeApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +115,7 @@
 			);
 			name = Instagram;
 			productName = Instagram;
-			productReference = 25B0E0401CF36E25004151E1 /* Instagram.app */;
+			productReference = 25B0E0401CF36E25004151E1 /* InstagramLikeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 25B0E03B1CF36E25004151E1 /* Build configuration list for PBXProject "Instagram" */;
+			buildConfigurationList = 25B0E03B1CF36E25004151E1 /* Build configuration list for PBXProject "InstagramLikeApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -293,7 +293,7 @@
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = emresasmaz.Instagram;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InstagramLikeApp;
 			};
 			name = Debug;
 		};
@@ -304,14 +304,14 @@
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = emresasmaz.Instagram;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InstagramLikeApp;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25B0E03B1CF36E25004151E1 /* Build configuration list for PBXProject "Instagram" */ = {
+		25B0E03B1CF36E25004151E1 /* Build configuration list for PBXProject "InstagramLikeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25B0E0501CF36E25004151E1 /* Debug */,
