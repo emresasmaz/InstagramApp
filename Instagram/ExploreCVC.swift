@@ -10,6 +10,7 @@ import UIKit
 import SimpleAuth
 
 class ExploreCVC: UICollectionViewController {
+    private var accessToken: String!
     
     private let leftAndRightPaddings: CGFloat = 32.0
     private let numberOfItemsPerRow: CGFloat = 3.0
@@ -25,48 +26,44 @@ class ExploreCVC: UICollectionViewController {
         //configure the collection view
         self.collectionView?.backgroundColor = UIColor.whiteColor()
         //configure the view
-        let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow        
+        let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width + heightAdjustment)
         
         
-        SimpleAuth.authorize("instagram") {
-            (responseObject, error) -> Void in
-            print(responseObject)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let token = userDefaults.objectForKey("accessToken") as? String {
+            print("Log In")
+            self.accessToken = token
+            print(accessToken)
+            
+        } else {
+            
+            SimpleAuth.authorize("instagram") {
+                (responseObject, error) -> Void in
+                if let response = responseObject as? NSDictionary {
+                    let credentials = response["credentials"] as! NSDictionary
+                    let accessToken = credentials["token"] as! String
+                    self.accessToken = accessToken
+                    
+                    userDefaults.setObject(self.accessToken, forKey: "accessToken")
+                    userDefaults.synchronize()
+                    
+                }
+            }
         }
-       // authInstagram()
     }
-//    private var accessToken: String!
-//    private let ACCESS_TOKEN_STR: String = "accessToken"
-//    func authInstagram() {
-//        let userDefaults = NSUserDefaults.standardUserDefaults()
-//        if let token = userDefaults.objectForKey(self.ACCESS_TOKEN_STR) as? String {
-//            
-//            self.accessToken = token
-//            print(accessToken)
-//            
-//            //start fetching photos
-//           // fetchPhotos()
-//            
-//        } else {
-//            
-//            SimpleAuth.authorize("instagram") {
-//                (responseObject, error) -> Void in
-//                if let resposne = responseObject as? NSDictionary {
-//                    let credentials = resposne["credentials"] as! NSDictionary
-//                    let accessToken = credentials["token"] as! String
-//                    self.accessToken = accessToken
-//                    
-//                    userDefaults.setObject(self.accessToken, forKey: self.ACCESS_TOKEN_STR)
-//                    userDefaults.synchronize()
-//                    
-//                  //  self.fetchPhotos()
-//                }
-//            }
-//        }
-//    }
-
     
+    //https://api.instagram.com/v1/tags/{tag-name}/media/recent?access_token=ACCESS-TOKEN
+    
+    func urlWithSearchText(searchText: String) -> NSURL {
+        let espacedSearchText = searchText.stringByReplacingOccurrencesOfString(" ", withString: "")
+        let urlString = "https://api.instagram.com/v1/tags/\(espacedSearchText)/media/recent?access_token=\(self.accessToken)"
+        
+        let url = NSURL(string: urlString)!
+        return url
+    }
+
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
