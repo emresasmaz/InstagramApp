@@ -10,8 +10,10 @@ import UIKit
 import SimpleAuth
 
 class ExploreCVC: UICollectionViewController {
+    @IBOutlet var searchBar: UISearchBar!
     private var accessToken: String!
-    
+    private var photoDictionaries = [AnyObject]()
+    private var data:[[String: String!]] = []
     private let leftAndRightPaddings: CGFloat = 32.0
     private let numberOfItemsPerRow: CGFloat = 3.0
     private let heightAdjustment: CGFloat = 30.0
@@ -29,14 +31,16 @@ class ExploreCVC: UICollectionViewController {
         let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width + heightAdjustment)
-        
-        
+        auth()
+    }
+    
+    func auth(){
         let userDefaults = NSUserDefaults.standardUserDefaults()
         if let token = userDefaults.objectForKey("accessToken") as? String {
             print("Log In")
             self.accessToken = token
             print(accessToken)
-            
+            self.fetchPhotos()
         } else {
             
             SimpleAuth.authorize("instagram") {
@@ -48,7 +52,7 @@ class ExploreCVC: UICollectionViewController {
                     
                     userDefaults.setObject(self.accessToken, forKey: "accessToken")
                     userDefaults.synchronize()
-                    
+                    self.fetchPhotos()
                 }
             }
         }
@@ -63,20 +67,57 @@ class ExploreCVC: UICollectionViewController {
         let url = NSURL(string: urlString)!
         return url
     }
+    
+        func fetchPhotos() {
+            //get the session first
+            let session = NSURLSession.sharedSession()
+            let searchText = self.searchBar.text!
+            let url: NSURL
+    
+            if !searchText.isEmpty {
+                url = urlWithSearchText(searchText)
+            } else {
+                url = urlWithSearchText("istanbul")
+            }
+            //create a request for fetching from server
+            let request = NSURLRequest(URL: url)
+    
+            let task = session.downloadTaskWithRequest(request) { (localFile, response, error) -> Void in
+                if error == nil { //no errors in the request
+                    let data = NSData(contentsOfURL: localFile!) //received data
+                    //parse json with NSJSON serializer
+                    do{
+                        let responseDictionary = try NSJSONSerialization.JSONObjectWithData(data! , options: NSJSONReadingOptions.AllowFragments)
+    
+                        self.photoDictionaries = responseDictionary.valueForKey("data") as! [AnyObject]
+                        print(self.photoDictionaries)
+                        
+    
+                    } catch let error{
+                        print(error)
+                    }
+                }
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.collectionView?.reloadData()
+                })
+                
+            }
+            task.resume()
+        }
+
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return self.photoDictionaries.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.explorePhotoCell, forIndexPath: indexPath) as! ExploreCollectionViewCell
         
-        cell.imageView.image = UIImage(named : "noimages")
-        
-        
+        let photoDictionary = photoDictionaries[indexPath.item]
+        cell.photo = photoDictionary
         return cell
         
         

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '72235A259FF302CAB6E3130F'
-               BlueprintName = 'SimpleAuth'
+               BlueprintIdentifier = '600A94EDAA1DB9DD20A1D41C'
+               BlueprintName = 'SAMCache'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SimpleAuth.framework'>
+               BuildableName = 'SAMCache.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

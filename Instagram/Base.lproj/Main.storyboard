@@ -80,6 +80,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="tWL-FE-fnx"/>
+                    <connections>
+                        <outlet property="searchBar" destination="9P1-fs-aMI" id="NR5-BE-e36"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpb-zb-m2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchBar contentMode="redraw" id="9P1-fs-aMI">
@@ -279,7 +282,7 @@
         <scene sceneID="B2n-Ar-enf">
             <objects>
                 <navigationController title="Explore" automaticallyAdjustsScrollViewInsets="NO" id="9fc-rM-BvX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" id="YOw-hi-L1u"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="YOw-hi-L1u"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8DM-T1-MKX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -299,7 +302,7 @@
         <scene sceneID="p6m-C8-BtA">
             <objects>
                 <navigationController title="Feed" automaticallyAdjustsScrollViewInsets="NO" id="ZMZ-qv-oJg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="cCl-BS-iT4"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="cCl-BS-iT4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SEr-Ia-unR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
