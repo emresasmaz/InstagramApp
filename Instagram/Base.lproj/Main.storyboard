@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-641" y="29"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--ExploreCVC-->
         <scene sceneID="Iu3-89-Ef2">
             <objects>
-                <collectionViewController id="8ok-QQ-puR" sceneMemberID="viewController">
+                <collectionViewController id="8ok-QQ-puR" customClass="ExploreCVC" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="W4u-xc-iqS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                             <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iPp-pj-Q3v">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExplorePhotoCell" id="iPp-pj-Q3v" customClass="ExploreCollectionViewCell" customModule="Instagram" customModuleProvider="target">
                                 <rect key="frame" x="8" y="64" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -57,6 +57,9 @@
                                     <constraint firstAttribute="trailing" secondItem="KgZ-nQ-k3U" secondAttribute="trailing" id="j97-qb-Y0q"/>
                                     <constraint firstAttribute="bottom" secondItem="KgZ-nQ-k3U" secondAttribute="bottom" id="zJ8-cH-RhN"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="KgZ-nQ-k3U" id="NmI-r4-PWy"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -67,6 +70,11 @@
                     <navigationItem key="navigationItem" id="tWL-FE-fnx"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpb-zb-m2s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" id="9P1-fs-aMI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
             <point key="canvasLocation" x="910" y="-291"/>
         </scene>
