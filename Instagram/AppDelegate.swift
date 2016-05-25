@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         let authDict = [
-            "client_id": "80cf3927778442019642d769b62755ef" ,
-            SimpleAuthRedirectURIKey: "photoapplikeinsta://auth/instagram"]
+            "client_id": "d42d5b2d136e4b62a3a22120ad9537c8" ,
+            SimpleAuthRedirectURIKey: "instagramlikeapp://auth/instagram"]
             SimpleAuth.configuration()["instagram"] = authDict
         return true
     }

@@ -30,11 +30,42 @@ class ExploreCVC: UICollectionViewController {
         layout.itemSize = CGSizeMake(width, width + heightAdjustment)
         
         
-        SimpleAuth.authorize("instagram") { (responseObject, error) -> Void in
+        SimpleAuth.authorize("instagram") {
+            (responseObject, error) -> Void in
             print(responseObject)
         }
-
+       // authInstagram()
     }
+//    private var accessToken: String!
+//    private let ACCESS_TOKEN_STR: String = "accessToken"
+//    func authInstagram() {
+//        let userDefaults = NSUserDefaults.standardUserDefaults()
+//        if let token = userDefaults.objectForKey(self.ACCESS_TOKEN_STR) as? String {
+//            
+//            self.accessToken = token
+//            print(accessToken)
+//            
+//            //start fetching photos
+//           // fetchPhotos()
+//            
+//        } else {
+//            
+//            SimpleAuth.authorize("instagram") {
+//                (responseObject, error) -> Void in
+//                if let resposne = responseObject as? NSDictionary {
+//                    let credentials = resposne["credentials"] as! NSDictionary
+//                    let accessToken = credentials["token"] as! String
+//                    self.accessToken = accessToken
+//                    
+//                    userDefaults.setObject(self.accessToken, forKey: self.ACCESS_TOKEN_STR)
+//                    userDefaults.synchronize()
+//                    
+//                  //  self.fetchPhotos()
+//                }
+//            }
+//        }
+//    }
+
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
