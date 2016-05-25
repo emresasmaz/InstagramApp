@@ -72,7 +72,7 @@
 		25B0E0371CF36E25004151E1 = {
 			isa = PBXGroup;
 			children = (
-				25B0E0421CF36E25004151E1 /* Instagram */,
+				25B0E0421CF36E25004151E1 /* InstagramLikeApp */,
 				25B0E0411CF36E25004151E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,7 +85,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		25B0E0421CF36E25004151E1 /* Instagram */ = {
+		25B0E0421CF36E25004151E1 /* InstagramLikeApp */ = {
 			isa = PBXGroup;
 			children = (
 				25B0E0431CF36E25004151E1 /* AppDelegate.swift */,
@@ -95,6 +95,7 @@
 				25AC01491CF6073800BCE693 /* Controller */,
 				25AC01481CF6070E00BCE693 /* View */,
 			);
+			name = InstagramLikeApp;
 			path = Instagram;
 			sourceTree = "<group>";
 		};
