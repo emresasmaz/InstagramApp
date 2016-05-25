@@ -17,7 +17,7 @@
                BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
                BuildableName = "Instagram.app"
                BlueprintName = "Instagram"
-               ReferencedContainer = "container:InstagramLikeApp.xcodeproj">
+               ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
             BuildableName = "Instagram.app"
             BlueprintName = "Instagram"
-            ReferencedContainer = "container:InstagramLikeApp.xcodeproj">
+            ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
             BuildableName = "Instagram.app"
             BlueprintName = "Instagram"
-            ReferencedContainer = "container:InstagramLikeApp.xcodeproj">
+            ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "25B0E03F1CF36E25004151E1"
             BuildableName = "Instagram.app"
             BlueprintName = "Instagram"
-            ReferencedContainer = "container:InstagramLikeApp.xcodeproj">
+            ReferencedContainer = "container:photoapplikeinsta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
