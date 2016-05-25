@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SimpleAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes =
             [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        let authDict = [
+            "client_id": "80cf3927778442019642d769b62755ef" ,
+            SimpleAuthRedirectURIKey: "photoapplikeinsta://auth/instagram"]
+            SimpleAuth.configuration()["instagram"] = authDict
         return true
     }
 

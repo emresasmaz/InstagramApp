@@ -7,8 +7,8 @@
 //
 
 import UIKit
+import SimpleAuth
 
-private let reuseIdentifier = "Cell"
 class ExploreCVC: UICollectionViewController {
     
     private let leftAndRightPaddings: CGFloat = 32.0
@@ -24,13 +24,15 @@ class ExploreCVC: UICollectionViewController {
         
         //configure the collection view
         self.collectionView?.backgroundColor = UIColor.whiteColor()
-        
-        
         //configure the view
-        let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
-        
+        let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow        
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width + heightAdjustment)
+        
+        
+        SimpleAuth.authorize("instagram") { (responseObject, error) -> Void in
+            print(responseObject)
+        }
 
     }
     
